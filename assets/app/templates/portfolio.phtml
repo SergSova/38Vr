@@ -1,0 +1,139 @@
+[[$head?
+&style=`1`
+&media=`1`
+&classes=`protfolio`
+]]
+
+<header class="neww-headers">
+    <div class="numb">
+        <div class="numbers numb1" style="opacity: 0;">
+            <div class="hd"><span>01.</span></div>
+        </div>
+        <div class="numbers numb2">
+            <div class="hd"><span>01.</span></div>
+        </div>
+        <div class="numbers numb3">
+            <div class="hd"><span>02.</span></div>
+        </div>
+    </div>
+
+    <div class="main-menu">
+        <ul>
+            [[$main_menu]]
+        </ul>
+    </div>
+
+    <div class="head-line">
+        <div class="logo"><a href="[[++site_url]]"><img
+                        src="/assets/img/logo.png" alt=""></a>
+        </div>
+        <div class="lang lang-mark">
+            <div class="lang-block">
+                <ul>
+                    [[$lang_block]]
+                </ul>
+            </div>
+        </div>
+        <div class="menu"><img src="/assets/img/menu.png" alt=""></div>
+        <div class="langy">
+            <div class="lang-block">
+                <ul>
+                    [[$lang_block]]
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="main">
+
+    <div class="wrap-lines">
+        <div class="wrap-container">
+            <div class="line line1 active"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line9"></div>
+        </div>
+    </div>
+
+
+    <section class="sect sect002">
+        <div class="fonn-arti"></div>
+        <div class="container">
+            <div class="portfolio portfolio-mark">
+
+                [[!pdoCrumbs?
+                &tplHome=`@INLINE
+                <li><a href="[[++site_url]]"><img
+                                src="/assets/img/homee.png" alt="">home</a>
+                </li>
+                `
+                &showHome=`1`
+                &showAtHome=`0`
+                ]]
+
+                <div id="selectyBoxi">
+                    <div class="closs"><img src="/assets/img/closy.png" alt="">
+                    </div>
+                    <p class="valueTags" name="selects">category</p>
+                    <div class="clear"></div>
+                    <ul id="selectyMenuBoxi">
+                        <li class="options">All</li>
+                        [[pdoResources?
+                        &parents=`[[*id]]`
+                        &tpl=`@INLINE
+                        <li class="options" data-parent="[[+id]]">
+                            {{+pagetitle:strtolower:ucfirst}}
+                        </li>
+                        `
+                        &showLog=`0`
+                        &showUnpublished=`1`
+                        &depth=`0`
+                        ]]
+                    </ul>
+                </div>
+                <h1>[[*pagetitle]]</h1>
+                <div class="collection-wraper"></div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+[[$menus_open]]
+
+
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/owl-carousel.min.js"></script>
+<script src="/assets/js/nice.js"></script>
+<script src="/assets/js/comon.js"></script>
+
+<script>
+    $(function () {
+        $.get({
+            url: '/ajax-portfolio',
+            success: function (resp) {
+                $('.collection-wraper').html(resp);
+            }
+        });
+
+        $('#selectyMenuBoxi li').on('click', function () {
+            var data = $(this).data('parent');
+            $.get({
+                url: '/ajax-portfolio',
+                data: {'parent': data},
+                success: function (resp) {
+                    $('.collection-wraper').html(resp);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>

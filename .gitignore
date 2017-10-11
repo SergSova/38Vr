@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+
+/assets/js/
+/.htaccess
+/index.php
+/assets/fonts/
+/assets/css/
+/assets/img/
+/assets/html/
+/config.core.php
+/robots.txt
+/favicon.png

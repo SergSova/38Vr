@@ -1,0 +1,260 @@
+[[$head?
+&style=`1`
+&media=`1`
+&vik=`1`
+&classes=`service`
+&css_path=`/1/`
+]]
+<section class="sect sect0" id="sect0">
+    <header class="headers head04">
+
+        <div class="mobil"><img src="/assets/img/woman4.png" alt=""></div>
+        <div class="mobil-name">
+            <h1>[[*pagetitle]]</h1>
+            <h2>[[*content]]</h2>
+        </div>
+        <div class="numb">
+            <div class="numbers numb1">
+                <div class="hd"><span>01.</span></div>
+            </div>
+            <div class="numbers numb2">
+                <div class="hd"><span>02.</span></div>
+            </div>
+            <div class="numbers numb3">
+                <div class="hd"><span>03.</span></div>
+            </div>
+            <div class="numbers numb4">
+                <div class="hd"><span>04.</span></div>
+            </div>
+
+            <div class="numbers numb5">
+                <div class="hd"><span>05.</span></div>
+            </div>
+        </div>
+
+
+        <div class="main-menu">
+            <ul>
+                [[$main_menu]]
+            </ul>
+        </div>
+        <div class="fonn4"></div>
+        <div class="divv-fonn">
+            <div class="fonn"></div>
+        </div>
+        <div class="video-all-in">
+            <div class="container-video">
+                <div id="video">
+                    <canvas id="bordersCanvas"
+                            data-image="/assets/img/fonnt004.png" width="0"
+                            height="0"></canvas>
+                </div>
+                <div id="video-butt">
+                    <div class="head-text"><h1>[[*pagetitle]]</h1></div>
+                    <div class="noter-text"><h2>[[*content]]</h2></div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-lines9">
+            <div class="wrap-container5">
+                <div class="line0 line01">
+                    <div class="white-line"></div>
+                </div>
+                <div class="line0 line02">
+                    <div class="white-line"></div>
+                </div>
+                <div class="line0 line03">
+                    <div class="white-line"></div>
+                </div>
+                <div class="line0 line04">
+                    <div class="white-line"></div>
+                    <div class="white-line9"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="head-line">
+            <div class="logo"><a href="[[++site_url]]"><img
+                            src="/assets/img/logo.png"
+                            alt=""></a></div>
+            <div class="lang lang-mark">
+                <div class="lang-block">
+                    <ul>
+                        [[$lang_block]]
+                    </ul>
+                </div>
+            </div>
+            <div class="menu"><img src="/assets/img/menu.png" alt=""></div>
+            <div class="langy">
+                <div class="lang-block">
+                    <ul>
+                        [[$lang_block]]
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </header>
+</section>
+
+<div class="main">
+
+
+    <div class="wrap-lines">
+        <div class="wrap-container">
+            <div class="line line1 active"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line9"></div>
+        </div>
+    </div>
+
+
+    <section class="sect sect001">
+        <div class="container sect2">
+            <div class="advan">
+                <h3>[[*advan_title]]</h3>
+                [[!getImageList?
+                &docid=`[[*id]]`
+                &tvname=`migx_advan_catalog`
+                &tpl=`@CODE:
+                <div class="advan-item [[+idx:is=`1`:then=`mark-advan`]]">
+                    <div class="imgg"><img src="[[+image]]" alt="[[+alt]]"
+                                           title="[[+img_title]]"></div>
+                    [[+text]]
+                </div>
+                `
+                ]]
+                <div class="clear"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sect sect002">
+        <div class="container">
+            <div class="portfolio"><h2>[[#[[%9:bid]].pagetitle]]</h2>
+                [[!pdoResources?
+                &parents=`[[%9:bid]]`
+                &includeTVs=`port_main_img,double_size`
+                &tvPrefix=``
+                &sortby=`{"menuindex":"ASC"}`
+                &tpl=`portfolio_item_tpl`
+                &showLog=`0`
+                ]]
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sect sect003">
+        <div class="container">
+            <div class="task">
+                <h3>[[*what_does_title]]</h3>
+                <div class="task-whom">
+                    <div class="whom0">
+                        <div class="hshka"><h4>[[*what_does_sub_title]]</h4>
+                        </div>
+                    </div>
+
+                    [[!getImageList?
+                    &docid=`[[*id]]`
+                    &tvname=`migx_what_does_collection`
+                    &tpl=`@CODE:
+                    <div class="whom whom{{+idx:add=`3`}}">
+                        <div class="whom-img">
+                            <div class="galer">
+                                <div class="tenn"></div>
+                                <div class="tenn9"></div>
+                                <img src="[[+image]]" alt="[[+alt]]"
+                                     title="[[+img_title]]"></div>
+                            <div class="whom-text[[+idx]]"><p>0[[+idx]]</p>
+                                <span>[[+text]]</span>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                    ]]
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+            <div class="acqua">
+                [[$forma_tpl?&h3=`[[*form_title]]`&text=`[[*form_text]]`]]
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sect sect004">
+        <div class="container sect10">
+            <div class="article">
+
+                <div class="arti">
+                    <h3>[[*articles_title]]</h3>
+                    [[!pdoResources?
+                    &parents=`[[%16:bid]]`
+                    &includeTVs=`article_image,article_desc`
+                    &tvPrefix=``
+                    &showLog=`0`
+                    &sortby=`{"menuindex":"ASC"}`
+                    &limit=`4`
+                    &tpl=`@INLINE
+                    <div class="virtu">
+                        <div class="left-virt">
+                            <img src="[[+article_image]]" alt="">
+                            <div class="lead-more">
+                                <a href="{$_modx->makeUrl([[+id]])}">lead
+                                    more</a>
+                            </div>
+                            <div class="mess">
+                                <div class="left-mess">
+                                    <span>223</span>
+                                    <img src="/assets/img/mess.png" alt="">
+                                </div>
+                                <div class="right-mess">
+                                    <span>223</span>
+                                    <img src="/assets/img/seen.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-virt"><h4>[[+pagetitle]]</h4>
+                            <div class="desc">[[+article_desc]]</div>
+                        </div>
+                    </div>
+                    `
+                    ]]
+                    <div class="clear"></div>
+                    <div class="more"><a href="[[~[[%16:bid]]]]">more
+                            articles</a></div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <footer class="footers">
+
+        <div class="container">
+            <div class="text-foot">[[*seo_text]]</div>
+        </div>
+        <div class="fresh"><a href=""><img src="/assets/img/fresh.png"
+                                           alt=""></a></div>
+    </footer>
+    <div class="texy"><img src="/assets/img/vrvr.png" alt=""></div>
+    [[$menus_open]]
+</div>
+
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/owl-carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+<script src="/assets/js/vik.js"></script>
+<script src="/assets/js/nice.js"></script>
+<script src="/assets/js/comon.js"></script>
+
+
+</body>
+</html>
