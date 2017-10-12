@@ -7,11 +7,11 @@
                 <li class="home"><a [[!getLink?&id=`24`]]>[[#[[%24:bid]].pagetitle]]</a>
                 </li>
                 <!--about-->
-                <li class="home"><a [[!getLink?&id=`[[%5:bid]]`]]>[[#[[%5:bid]].pagetitle]]</a>
+                <li class="home home4"><a [[!getLink?&id=`[[%5:bid]]`]]>[[#[[%5:bid]].pagetitle]]</a>
                 </li><!--services-->
-                <li class="home"><a [[!getLink?&id=`[[%7:bid]]`]]>[[#[[%7:bid]].pagetitle]]</a>
+                <li class="home home5"><a [[!getLink?&id=`[[%7:bid]]`]]>[[#[[%7:bid]].pagetitle]]</a>
                 </li><!--portfolio-->
-                <li class="home"><a [[!getLink?&id=`[[%15:bid]]`]]>[[#[[%15:bid]].pagetitle]]</a>
+                <li class="home home9"><a [[!getLink?&id=`[[%15:bid]]`]]>[[#[[%15:bid]].pagetitle]]</a>
                 </li><!--blog-->
                 <li class="home"><a [[!getLink?&id=`[[%8:bid]]`]]>[[#[[%8:bid]].pagetitle]]</a>
                 </li><!--contact-->
@@ -22,11 +22,11 @@
                 <li class="pages"><a [[!getLink?&id=`24`]]>[[#[[%24:bid]].pagetitle]]</a>
                 </li>
                 <!--about-->
-                <li class="pages"><a [[!getLink?&id=`[[%5:bid]]`]]>[[#[[%5:bid]].pagetitle]]</a>
+                <li class="pages pages4"><a [[!getLink?&id=`[[%5:bid]]`]]>[[#[[%5:bid]].pagetitle]]</a>
                 </li><!--services-->
-                <li class="pages"><a [[!getLink?&id=`[[%7:bid]]`]]>[[#[[%7:bid]].pagetitle]]</a>
+                <li class="pages pages5"><a [[!getLink?&id=`[[%7:bid]]`]]>[[#[[%7:bid]].pagetitle]]</a>
                 </li><!--portfolio-->
-                <li class="pages"><a [[!getLink?&id=`[[%15:bid]]`]]>[[#[[%15:bid]].pagetitle]]</a>
+                <li class="pages pages9"><a [[!getLink?&id=`[[%15:bid]]`]]>[[#[[%15:bid]].pagetitle]]</a>
                 </li><!--blog-->
                 <li class="pages"><a [[!getLink?&id=`[[%8:bid]]`]]>[[#[[%8:bid]].pagetitle]]</a>
                 </li><!--contact-->
@@ -54,15 +54,15 @@
                     </div>
                     <div class="movie5">
                         [[!pdoResources?
-                        &parents=`[[%5:bid]]`
+                        &parents=`[[%7:bid]]`
                         &showLog=`0`
-                        &select=`id,pagetitle,services_image`
-                        &includeTVs=`services_image`
+                        &select=`id,pagetitle,port_main_img`
+                        &includeTVs=`port_main_img`
                         &tvPrefix=``
-                        &depth=`0`
+                        &where=`{"template":4}`
                         &tpl=`@INLINE <a [[!getLink?&id=`[[+id]]`]]>
                             <div class="item-movie">
-                                <img src="[[+services_image]]"
+                                <img src="[[+port_main_img]]"
                                      alt="[[+pagetitle]]">
                                 <p>[[+pagetitle]]</p>
                             </div>
@@ -71,15 +71,15 @@
                     </div>
                     <div class="movie9">
                         [[!pdoResources?
-                        &parents=`[[%5:bid]]`
+                        &parents=`[[%16:bid]]`
                         &showLog=`0`
-                        &select=`id,pagetitle,services_image`
-                        &includeTVs=`services_image`
+                        &select=`id,pagetitle,article_image`
+                        &includeTVs=`article_image`
                         &tvPrefix=``
-                        &depth=`0`
+                        &where=`{"template":5}`
                         &tpl=`@INLINE <a [[!getLink?&id=`[[+id]]`]]>
                             <div class="item-movie">
-                                <img src="[[+services_image]]"
+                                <img src="[[+article_image]]"
                                      alt="[[+pagetitle]]">
                                 <p>[[+pagetitle]]</p>
                             </div>

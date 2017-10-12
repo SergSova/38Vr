@@ -1,10 +1,10 @@
-[[$head?&style=`1`&media=`1`&vik=`1`&classes=`service`&css_path=`/1/`]]
-<section class="sect sect0" id="sect0">
+[[$head?&style=`1`&media=`1`&vik=`1`&main=`1`&classes=`about-page`]]
+
+<section class="sect sect0 head-about" id="sect0">
     <header class="headers head04">
 
         <div class="mobil"><img src="/assets/img/woman4.png" alt=""></div>
-        <div class="mobil-name">
-            <h1>[[*pagetitle]]</h1>
+        <div class="mobil-name"><h1>[[*pagetitle]]</h1>
             <h2>[[*content]]</h2>
         </div>
         <div class="numb">
@@ -26,7 +26,6 @@
             </div>
         </div>
 
-
         <div class="main-menu">
             <ul>
                 [[$main_menu]]
@@ -40,8 +39,8 @@
             <div class="container-video">
                 <div id="video">
                     <canvas id="bordersCanvas"
-                            data-image="/assets/img/fonnt004.png" width="0"
-                            height="0"></canvas>
+                            data-image="/assets/img/about005.png"
+                            width="0" height="0"></canvas>
                 </div>
                 <div id="video-butt">
                     <div class="head-text"><h1>[[*pagetitle]]</h1></div>
@@ -51,16 +50,16 @@
         </div>
         <div class="wrap-lines9">
             <div class="wrap-container5">
-                <div class="line0 line01">
+                <div class="line line1">
                     <div class="white-line"></div>
                 </div>
-                <div class="line0 line02">
+                <div class="line line2">
                     <div class="white-line"></div>
                 </div>
-                <div class="line0 line03">
+                <div class="line line3">
                     <div class="white-line"></div>
                 </div>
-                <div class="line0 line04">
+                <div class="line line4">
                     <div class="white-line"></div>
                     <div class="white-line9"></div>
                 </div>
@@ -68,9 +67,9 @@
         </div>
 
         <div class="head-line">
-            <div class="logo"><a href="[[++site_url]]"><img
-                            src="/assets/img/logo.png"
-                            alt=""></a></div>
+            <div class="logo"><a href="[[+site_url]]"><img
+                            src="/assets/img/logo.png" alt=""></a>
+            </div>
             <div class="lang lang-mark">
                 <div class="lang-block">
                     <ul>
@@ -109,9 +108,9 @@
     <section class="sect sect001">
         <div class="container sect2">
             <div class="advan">
-                <h3>[[*advan_title]]</h3>
+                <h3>ADVANTAGES OF WORKING with us on vr</h3>
                 [[!getImageList?
-                &docid=`[[*id]]`
+                &docid=`[[%6:bid]]`
                 &tvname=`migx_advan_catalog`
                 &tpl=`@CODE:
                 <div class="advan-item [[+idx:is=`1`:then=`mark-advan`]]">
@@ -137,6 +136,7 @@
                 &sortby=`{"menuindex":"ASC"}`
                 &tpl=`portfolio_item_tpl`
                 &showLog=`0`
+                &limit=`4`
                 ]]
             </div>
         </div>
@@ -145,16 +145,17 @@
 
     <section class="sect sect003">
         <div class="container">
-            <div class="task">
-                <h3>[[*what_does_title]]</h3>
-                <div class="task-whom">
-                    <div class="whom0">
-                        <div class="hshka"><h4>[[*what_does_sub_title]]</h4>
-                        </div>
-                    </div>
 
+            <div class="task">
+                <h3>[[#[[%6:bid]].what_does_title]]</h3>
+                <div class="task-whom">
+
+                    <div class="whom0">
+                        <div class="hshka"><h4>
+                                [[#[[%6:bid]].what_does_sub_title]]</h4></div>
+                    </div>
                     [[!getImageList?
-                    &docid=`[[*id]]`
+                    &docid=`[[%6:bid]]`
                     &tvname=`migx_what_does_collection`
                     &tpl=`@CODE:
                     <div class="whom whom{{+idx:add=`3`}}">
@@ -177,7 +178,7 @@
 
 
             <div class="acqua">
-                [[$forma_tpl?&h3=`[[*form_title]]`&text=`[[*form_text]]`]]
+                [[$forma_tpl?&h3=`[[#[[%6:bid]].form_title]]`&text=`[[#[[%6:bid]].form_text]]`]]
             </div>
         </div>
     </section>
@@ -187,8 +188,9 @@
         <div class="container sect10">
             <div class="article">
 
+
                 <div class="arti">
-                    <h3>[[*articles_title]]</h3>
+                    <h3>[[#[[%6:bid]].articles_title]]</h3>
                     [[!pdoResources?
                     &parents=`[[%16:bid]]`
                     &includeTVs=`article_image,article_desc`
@@ -206,26 +208,24 @@
         </div>
 
 
-    </section>
-    <footer class="footers">
+        <footer class="footers">
 
-        <div class="container">
-            <div class="text-foot">[[*seo_text]]</div>
-        </div>
-        <div class="fresh"><a href=""><img src="/assets/img/fresh.png"
-                                           alt=""></a></div>
-    </footer>
+            <div class="container">
+                <div class="text-foot">[[*seo_text]]</div>
+            </div>
+            <div class="fresh"><a href=""><img src="/assets/img/fresh.png"
+                                               alt=""></a>
+            </div>
+        </footer>
+    </section>
     <div class="texy"><img src="/assets/img/vrvr.png" alt=""></div>
     [[$menus_open]]
 </div>
-
 <script src="/assets/js/jquery-3.2.1.min.js"></script>
-<script src="/assets/js/owl-carousel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+
 <script src="/assets/js/vik.js"></script>
 <script src="/assets/js/nice.js"></script>
 <script src="/assets/js/comon.js"></script>
-
-
 </body>
 </html>
