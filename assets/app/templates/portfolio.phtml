@@ -117,16 +117,60 @@
         $.get({
             url: '/ajax-portfolio',
             success: function (resp) {
-                $('.collection-wraper').html(resp);
+                ans = $.parseHTML(resp);
+                toSort = []
+
+                for (i=0; i < ans.length; i++ ) {
+                    if(i % 2 == 0) {
+                        toSort.push(ans[i])
+                    }
+                }
+                console.log(toSort);
+
+                sorting(toSort)
             }
         });
-
+        
+        function sorting(toSort) {
+            hash1 = /double-size/;
+            hash2 = /vertical/;
+            rows = 0;
+            row = 1;
+            pos = 1;
+            sortedGor = [];
+            for (i=1; i < toSort.length+1; i++ ) {
+                console.log(i);
+                if (hash1.test(toSort[i-1].classList.value)){
+                        if(pos%3 == 0) {
+                            sortedGor.push(toSort[i]);
+                            sortedGor.push(toSort[i-1]);
+                            i += 1;
+                        }
+                    pos += 2;
+                }else {
+                    sortedGor.push(toSort[i-1]);
+                    pos += 1;
+                }
+                pos % 3 == 0 ? row += 1 : '';
+                console.log('row' + row);
+            }
+            rows = row;
+            console.log('sorted');
+            console.log(sortedGor);
+            $('.collection-wraper').html(sortedGor);
+        }
+        
+        
+        
+        
+        
         $('#selectyMenuBoxi li').on('click', function () {
             var data = $(this).data('parent');
             $.get({
                 url: '/ajax-portfolio',
                 data: {'parent': data},
                 success: function (resp) {
+
                     $('.collection-wraper').html(resp);
                 }
             });

@@ -22,5 +22,9 @@
     [[+vik:!empty=`
     <link rel="stylesheet" href="/assets/css[[+css_path:default=`/`]]vik.css">
     `]]
+    [[+main:!empty=`
+    <link rel="stylesheet" href="/assets/css[[+css_path:default=`/`]]main.css">
+    `]]
+
 </head>
 <body class="[[+classes]]">

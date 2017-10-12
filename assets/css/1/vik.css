@@ -1,0 +1,398 @@
+.cross-obj {
+    width: 30px;
+    height: 20px;
+    transform: rotate(0deg);
+    transition: .3s linear;
+}
+
+.cross-menu:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -.5px;
+    margin-left: -.5px;
+    width: 1px;
+    height: 1px;
+    transition: .7s linear;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, .5);
+    opacity: 1;
+    animation: crossBubble1 .5s linear forwards;
+}
+
+.cross-obj span {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 6.5px;
+    display: block;
+    transition: .3s linear;
+    transform: rotate(0deg) translate(0px, 0px);
+}
+
+.cross-obj span:last-child {
+    margin-bottom: 0;
+}
+
+.cross-menu.active .cross-obj {
+    transform: rotate(90deg);
+}
+
+.cross-menu.active:before {
+    animation: crossBubble2 .5s linear forwards;
+}
+
+.cross-menu.active .cross-obj span:nth-child(1) {
+    transform: rotate(140deg) translate(-8px, -11px);
+    width: 50%;
+}
+
+.cross-menu.active .cross-obj span:nth-child(2) {
+    transform: rotate(45deg) translate(0px, 0px);
+}
+
+.cross-menu.active .cross-obj span:nth-child(3) {
+    transform: rotate(140deg) translate(-3px, 2px);
+    width: 50%;
+}
+
+.close {
+    right: 25px;
+    top: 10px;
+    opacity: 1;
+}
+
+.closy .close {
+    opacity: 1;
+}
+
+.menus {
+    transition: .9s .3s;
+}
+
+.menus.openn {
+    transition: .9s;
+}
+
+@keyframes crossBubble1 {
+    to {
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes crossBubble2 {
+    to {
+        left: 0;
+        top: 0;
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+.lead:after {
+    transition: .3s linear .3s;
+}
+
+.lead:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    background: #cae600;
+    top: 50%;
+    transition: .3s linear;
+}
+
+.lead:hover:after {
+    right: 0;
+    width: 100%;
+    transition: .3s linear;
+}
+
+.lead:hover:before {
+    top: 0%;
+    height: 100%;
+    transition: .3s linear .3s;
+}
+
+.lead:hover a {
+    color: #000;
+    transition: .3s linear .35s;
+}
+
+.lead a {
+    width: 100%;
+    text-align: center;
+    height: 27px;
+    line-height: 27px;
+    z-index: 1;
+    transition: .3s linear;
+}
+
+/*more button*/
+.more {
+    position: relative;
+    transition: .3s linear;
+}
+
+.more a {
+    z-index: 1;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s linear;
+}
+
+.more:before {
+    content: "";
+    position: absolute;
+    right: 95%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: #cae600;
+    transition: right .3s linear .3s, width .3s linear .3s, height .3s linear, top .3s linear;
+}
+
+.more:after {
+    content: "";
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: #cae600;
+    transition: left .3s linear .3s, width .3s linear .3s, height .3s linear, top .3s linear;
+}
+
+.more:hover a {
+    color: #000;
+    transition: .3s linear .35s;
+}
+
+.more:hover:before {
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition: right .3s linear, width .3s linear, height .3s linear .3s, top .3s linear .3s;
+}
+
+.more:hover:after {
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition: left .3s linear, width .3s linear, height .3s linear .3s, top .3s linear .3s;
+}
+
+/*canvas*/
+
+#bordersCanvas {
+    width: 120%;
+    height: 120%;
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    margin-left: 12px;
+    margin-top: 17px;
+    z-index: 20;
+    transform-style: preserve-3d !important;
+    transform-origin: 50% 50%;
+    pointer-events: none;
+}
+
+.divv-fonn {
+    opacity: 0;
+}
+
+#video-butt {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    margin-left: -40%;
+}
+
+.head-text {
+    left: 30%;
+}
+
+/*team*/
+.item-imgg img {
+    -webkit-box-shadow: 0px 0px 0px transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 1px solid transparent;
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+}
+
+.item-imgg img:hover {
+    -webkit-transition: border .3s linear, -webkit-box-shadow .3s linear .2s;
+    transition: border .3s linear, -webkit-box-shadow .3s linear .2s;
+    transition: border .3s linear, box-shadow .3s linear .2s;
+    transition: border .3s linear, box-shadow .3s linear .2s, -webkit-box-shadow .3s linear .2s;
+    -webkit-box-shadow: 0px 0px 10px yellow;
+    box-shadow: 0px 0px 10px yellow;
+    border: 1px solid yellow;
+}
+
+/*menu line*/
+.left-menus li {
+    position: relative;
+}
+
+.left-menus li span {
+    position: absolute;
+    right: 0;
+    width: 1px;
+    bottom: 24px;
+    background: #cae600;
+    -webkit-transition: .15s linear;
+    transition: .15s linear;
+    height: 0px;
+    display: none;
+}
+
+.left-menus li span i {
+    content: "";
+    position: absolute;
+    top: -1px;
+    width: 0px;
+    background: #cae600;
+    height: 1px;
+    -webkit-transition: .15s linear;
+    transition: .15s linear;
+}
+
+.left-menus li span i.static {
+    width: 0 !important;
+}
+
+.left-menus li span.top {
+    top: auto;
+    bottom: 24px;
+}
+
+.left-menus li span.top i {
+    top: -1px;
+    bottom: auto;
+}
+
+.left-menus li span.bottom {
+    top: 48px;
+    bottom: auto;
+}
+
+.left-menus li span.bottom i {
+    top: auto;
+    bottom: 0;
+}
+
+.left-menus li span.toZero {
+    height: 0 !important;
+}
+
+/*logo hover*/
+
+.logo img {
+    opacity: 1;
+    transition: .3s linear;
+}
+
+.logo .inverted-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.logo:hover img {
+    opacity: 0;
+}
+
+.logo:hover .inverted-logo {
+    opacity: 1;
+}
+
+/*item movie*/
+
+.item-movie img {
+    box-shadow: 0px 0px 10px transparent;
+    transition: .5s linear;
+}
+
+.item-movie img:hover {
+    box-shadow: 0px 0px 10px #cae600;
+}
+
+/*.nemm div{
+	box-shadow: 0px 0px 5px 2px transparent;
+	transition: box-shadow .5s linear;
+}
+
+.nemm div.active{
+	box-shadow: 0px 0px 5px 2px #cae600;
+}*/
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    box-shadow: 0px 0px 5px 2px transparent;
+    transition: box-shadow .5s linear;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar.active {
+    box-shadow: 0px 0px 5px 2px #cae600;
+}
+
+/*customscrollbar*/
+
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+    display: none;
+}
+
+.mCSB_scrollTools {
+    width: 7%;
+    height: 90%;
+    top: 2.5%;
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 14px;
+    margin: 0 auto;
+}
+
+.movie-block > div a:first-child .item-movie {
+    margin-top: 20px;
+}
+
+.movie-block > div a:last-child .item-movie {
+    margin-bottom: 0px;
+}
+
+.00
+:after {
+    content: "";
+    position: absolute;
+    bottom: -48px;
+    left: -10%;
+    width: 100%;
+    height: 48px;
+    box-shadow: 0px -28px 34px rgba(0, 0, 0, 0.75);
+}
+
+.sect04 {
+    box-shadow: inset 0px -19px 17px rgba(0, 0, 0, 0.75);
+}
+
+.sect9 {
+    box-shadow: inset 0px -19px 17px rgba(0, 0, 0, 0.75);
+}
