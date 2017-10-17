@@ -10,7 +10,7 @@
                 <img src="/assets/img/mess.png" alt="">
             </div>
             <div class="right-mess">
-                <span>223</span>
+                <span>[[!+properties.hitspage.hitts:default=`0`]]</span>
                 <img src="/assets/img/seen.png" alt="">
             </div>
         </div>

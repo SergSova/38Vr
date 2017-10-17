@@ -43,7 +43,7 @@
                         &includeTVs=`services_image`
                         &tvPrefix=``
                         &depth=`0`
-                        &tpl=`@INLINE <a [[!getLink?&id=`[[+id]]`]]>
+                        &tpl=`@INLINE <a href="{$_modx->makeUrl([[+id]])}">
                             <div class="item-movie">
                                 <img src="[[+services_image]]"
                                      alt="[[+pagetitle]]">
@@ -60,7 +60,7 @@
                         &includeTVs=`port_main_img`
                         &tvPrefix=``
                         &where=`{"template":4}`
-                        &tpl=`@INLINE <a [[!getLink?&id=`[[+id]]`]]>
+                        &tpl=`@INLINE <a href="{$_modx->makeUrl([[+id]])}">
                             <div class="item-movie">
                                 <img src="[[+port_main_img]]"
                                      alt="[[+pagetitle]]">
@@ -77,7 +77,7 @@
                         &includeTVs=`article_image`
                         &tvPrefix=``
                         &where=`{"template":5}`
-                        &tpl=`@INLINE <a [[!getLink?&id=`[[+id]]`]]>
+                        &tpl=`@INLINE <a href="{$_modx->makeUrl([[+id]])}">
                             <div class="item-movie">
                                 <img src="[[+article_image]]"
                                      alt="[[+pagetitle]]">
@@ -94,7 +94,7 @@
                         &includeTVs=`services_image`
                         &tvPrefix=``
                         &depth=`0`
-                        &tpl=`@INLINE <a [[!getLink?&id=`[[+id]]`]]>
+                        &tpl=`@INLINE <a href="{$_modx->makeUrl([[+id]])}">
                             <div class="item-movie">
                                 <img src="[[+services_image]]"
                                      alt="[[+pagetitle]]">

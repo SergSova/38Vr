@@ -1,9 +1,4 @@
-[[$head?
-&style=`1`
-&media=`1`
-&vik=`1`
-&classes=`protfolio-item`
-]]
+[[$head?&vik=`1`&classes=`protfolio-item`]]
 <header class="neww-headers">
     <div class="numb">
         <div class="numbers numb1" style="opacity: 0;">
@@ -119,14 +114,18 @@
         <div class="container">
             <div class="projects">
                 <h3>Other projects</h3>
-                [[!pdoResources?
-                &parents=`[[*parent]]`
-                &resources=`[[pdoResources? &resources=`-[[*id]]` &sortby=`RAND()` &limit=`10` &returnIds=`1`]]`
-                &includeTVs=`port_main_img,double_size`
-                &tvPrefix=``
-                &tpl=`portfolio_item_tpl`
-                &showLog=`0`
-                ]]
+                <div class="collection-wraper">
+                    [[!pdoResources?
+                    &parents=`[[*parent]]`
+                    &resources=`[[pdoResources? &resources=`-[[*id]]`
+                    &sortby=`RAND()` &limit=`5` &returnIds=`1`]]`
+                    &includeTVs=`port_main_img,double_size`
+                    &tvPrefix=``
+                    &tpl=`portfolio_item_tpl`
+                    &showLog=`0`
+                    &limit=`5`
+                    ]]
+                </div>
                 <div class="lead"><a href="#">more articles</a></div>
 
 

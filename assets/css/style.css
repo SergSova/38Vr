@@ -484,8 +484,14 @@ transition: .2s;
 .wrap-container5 .line4:after {content: '';position: absolute;left: 0;content: '';top: 0;height: 100vh;width: 1px;background: #404040;}.line4 .white-line {position: absolute;left: 0;height: 149px;top: -149px;width: 1px;z-index: 5;background: url(../img/linee.png)no-repeat;}.moov5 .white-line {top: 100vh;transition: 1.49s;}
 .wrap-container5 .line4:before {right: -2px;content: '';top: 0;height: 100vh;width: 1px;background: #404040;position: absolute;}.lin04 .white-line9 {position: absolute;right: -2px;height: 149px;top: -149px;width: 1px;z-index: 5;background: url(../img/linee.png)no-repeat;}
 
-.moti:nth-of-type(1) {width: 28%;margin: 0 8% 0 0;display: inline-block;}
+/*.moti:nth-of-type(1) {width: 28%;margin: 0 8% 0 0;display: inline-block;}
 .double-size {display: inline-block;width: calc(100% - 36.79%);}.double-size .imgg-moti4 {background: url(/assets/img/moti00.png) no-repeat center;background-size: cover;}
 .moti:nth-of-type(3) {margin: 0 5% 0 0;width: 28%;display: inline-block;padding: 39px 0 0 0;}.moti:nth-of-type(3) .imgg-moti4 {background: url(/assets/img/moti000.png) no-repeat center;background-size: cover;}
 .moti:nth-of-type(4) {display: inline-block;width: 28%;margin: 0 3% 0;padding: 39px 0 0 0;}.moti:nth-of-type(4) .imgg-moti4 {background: url(/assets/img/moti0000.png) no-repeat center;background-size: cover;}
-.moti:nth-of-type(5) {width: 28%;display: inline-block;margin: 0 0 0 4.39%;padding: 39px 0 0 0;}.moti:nth-of-type(5) .imgg-moti4 {background: url(/assets/img/moti00000.png) no-repeat center;background-size: cover;} 
+.moti:nth-of-type(5) {width: 28%;display: inline-block;margin: 0 0 0 4.39%;padding: 39px 0 0 0;}.moti:nth-of-type(5) .imgg-moti4 {background: url(/assets/img/moti00000.png) no-repeat center;background-size: cover;} */
+
+
+.moti {width: 28%;padding: 39px 0 0 0;}.double-size {width: calc(59% - 5%);padding: 39px 0 0 0;}.collection-wraper {display: flex;justify-content: space-between;flex-wrap: wrap;}
+#disqus_thread {background: #0a0a0a;width: 977px;margin: 0 auto;padding: 79px;box-shadow: 0 0 30px 2px rgba(0,0,0,.84);-moz-box-shadow: 0 0 30px 2px rgba(0,0,0,.84);-webkit-box-shadow: 0 0 30px 2px rgba(0,0,0,.84);}
+
+.twoo-hire .howw:nth-child(1) .howw-hire h4:after {width: 149%;right: auto;left: 0;}.twoo-hire .howw:nth-child(1) {position: relative;left: 0;top: -105px;}.twoo-hire .howw:nth-child(2) {position: relative;top: -105px;left: 0;}

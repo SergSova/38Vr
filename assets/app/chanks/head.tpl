@@ -13,12 +13,8 @@
     <link rel="stylesheet"
           href="/assets/css/lib/jquery.mCustomScrollbar.min.css">
     `]]
-    [[+style:!empty=`
     <link rel="stylesheet" href="/assets/css[[+css_path:default=`/`]]style.css">
-    `]]
-    [[+media:!empty=`
     <link rel="stylesheet" href="/assets/css[[+css_path:default=`/`]]media.css">
-    `]]
     [[+vik:!empty=`
     <link rel="stylesheet" href="/assets/css[[+css_path:default=`/`]]vik.css">
     `]]

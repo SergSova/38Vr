@@ -1,4 +1,4 @@
-[[$head?&style=`1`&media=`1`&vik=`1`&classes=`service`&css_path=`/1/`]]
+[[$head?&vik=`1`&classes=`service`]]
 <section class="sect sect0" id="sect0">
     <header class="headers head04">
 
@@ -130,14 +130,17 @@
     <section class="sect sect002">
         <div class="container">
             <div class="portfolio"><h2>[[#[[%9:bid]].pagetitle]]</h2>
-                [[!pdoResources?
-                &parents=`[[%9:bid]]`
-                &includeTVs=`port_main_img,double_size`
-                &tvPrefix=``
-                &sortby=`{"menuindex":"ASC"}`
-                &tpl=`portfolio_item_tpl`
-                &showLog=`0`
-                ]]
+                <div class="collection-wraper">
+                    [[!pdoResources?
+                    &parents=`[[%9:bid]]`
+                    &includeTVs=`port_main_img,double_size`
+                    &tvPrefix=``
+                    &sortby=`{"menuindex":"ASC"}`
+                    &tpl=`portfolio_item_tpl`
+                    &showLog=`0`
+                    &limit=`5`
+                    ]]
+                </div>
             </div>
         </div>
     </section>
